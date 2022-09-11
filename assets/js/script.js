@@ -2,7 +2,16 @@ var currentDate = moment().format('MM/DD/YYYY');
 $("#currentDay").text(currentDate);
 
 //variables to create forms.
-var form9=$('<form></form>').attr('id', 'time-box-9')
+var form9=$('<form></form>').attr('id', 'time-box-9');
+var form10=$('<form></form>').attr('id', 'time-box-10');
+var form11=$('<form></form>').attr('id', 'time-box-11');
+var form12=$('<form></form>').attr('id', 'time-box-12');
+var form13=$('<form></form>').attr('id', 'time-box-13');
+var form14=$('<form></form>').attr('id', 'time-box-14');
+var form15=$('<form></form>').attr('id', 'time-box-15');
+var form16=$('<form></form>').attr('id', 'time-box-16');
+var form17=$('<form></form>').attr('id', 'time-box-17');
+
 
 //variables to add divs to timeblock.
 var hour9=$('<div> 09:00</div>');
@@ -42,30 +51,38 @@ form9.appendTo('.container');
 hour9.appendTo('#time-box-9');
 textArea9.appendTo('#time-box-9');
 button9.appendTo('#time-box-9');
-hour10.appendTo('.time-box-10');
-textArea10.appendTo('.time-box-10');
-button10.appendTo('.time-box-10');
-hour11.appendTo('.time-box-11');
-textArea11.appendTo('.time-box-11');
-button11.appendTo('.time-box-11');
-hour12.appendTo('.time-box-12');
-textArea12.appendTo('.time-box-12');
-button12.appendTo('.time-box-12');
-hour13.appendTo('.time-box-13');
-textArea13.appendTo('.time-box-13');
-button13.appendTo('.time-box-13');
-hour14.appendTo('.time-box-14');
-textArea14.appendTo('.time-box-14');
-button14.appendTo('.time-box-14');
-hour15.appendTo('.time-box-15');
-textArea15.appendTo('.time-box-15');
-button15.appendTo('.time-box-15');
-hour16.appendTo('.time-box-16');
-textArea16.appendTo('.time-box-16');
-button16.appendTo('.time-box-16');
-hour17.appendTo('.time-box-17');
-textArea17.appendTo('.time-box-17');
-button17.appendTo('.time-box-17');
+form10.appendTo('.container');
+hour10.appendTo('#time-box-10');
+textArea10.appendTo('#time-box-10');
+button10.appendTo('#time-box-10');
+form11.appendTo('.container');
+hour11.appendTo('#time-box-11');
+textArea11.appendTo('#time-box-11');
+button11.appendTo('#time-box-11');
+form12.appendTo('.container');
+hour12.appendTo('#time-box-12');
+textArea12.appendTo('#time-box-12');
+button12.appendTo('#time-box-12');
+form13.appendTo('.container');
+hour13.appendTo('#time-box-13');
+textArea13.appendTo('#time-box-13');
+button13.appendTo('#time-box-13');
+form14.appendTo('.container');
+hour14.appendTo('#time-box-14');
+textArea14.appendTo('#time-box-14');
+button14.appendTo('#time-box-14');
+form15.appendTo('.container');
+hour15.appendTo('#time-box-15');
+textArea15.appendTo('#time-box-15');
+button15.appendTo('#time-box-15');
+form16.appendTo('.container');
+hour16.appendTo('#time-box-16');
+textArea16.appendTo('#time-box-16');
+button16.appendTo('#time-box-16');
+form17.appendTo('.container');
+hour17.appendTo('#time-box-17');
+textArea17.appendTo('#time-box-17');
+button17.appendTo('#time-box-17');
 
 // on load, check localStorage and post to textarea.
 
