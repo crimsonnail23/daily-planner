@@ -182,7 +182,7 @@ $("#button-10").click(function(event){
 //following are variables for each hour that will then be compared to the current time. 
 //and if true,then it will change the class of text area.
 var currentTime = moment();
-var time_9 = moment({h:14});
+var time_9 = moment({h:9});
 var time_10= moment({h:10});
 var time_11=moment({h:11});
 var time_12=moment({h:12});
@@ -205,7 +205,105 @@ function checkTime_9(){
         $('#9-hour').attr('class', 'future')
     };
 };
+
+function checkTime_10(){
+    $('#10-hour').removeClass();
+    if(time_10.isBefore(currentTime)===true){
+        $('#10-hour').attr('class','past')
+    } else if(time_10.isSame(currentTime)===true){
+        $('#10-hour').attr('class','present')
+    } else if (time_10.isAfter(currentTime)===true){
+        $('#10-hour').attr('class', 'future')
+    };
+};
+
+function checkTime_11(){
+    $('#11-hour').removeClass();
+    if(time_9.isBefore(currentTime)===true){
+        $('#11-hour').attr('class','past')
+    } else if(time_11.isSame(currentTime)===true){
+        $('#11-hour').attr('class','present')
+    } else if (time_11.isAfter(currentTime)===true){
+        $('#11-hour').attr('class', 'future')
+    };
+};
+
+function checkTime_12(){
+    $('#12-hour').removeClass();
+    if(time_12.isBefore(currentTime)===true){
+        $('#12-hour').attr('class','past')
+    } else if(time_12.isSame(currentTime)===true){
+        $('#12-hour').attr('class','present')
+    } else if (time_12.isAfter(currentTime)===true){
+        $('#12-hour').attr('class', 'future')
+    };
+};
+
+function checkTime_13(){
+    $('#13-hour').removeClass();
+    if(time_13.isBefore(currentTime)===true){
+        $('#13-hour').attr('class','past')
+    } else if(time_13.isSame(currentTime)===true){
+        $('#13-hour').attr('class','present')
+    } else if (time_13.isAfter(currentTime)===true){
+        $('#13-hour').attr('class', 'future')
+    };
+};
+
+function checkTime_14(){
+    $('#14-hour').removeClass();
+    if(time_14.isBefore(currentTime)===true){
+        $('#14-hour').attr('class','past')
+    } else if(time_14.isSame(currentTime)===true){
+        $('#14-hour').attr('class','present')
+    } else if (time_14.isAfter(currentTime)===true){
+        $('#14-hour').attr('class', 'future')
+    };
+};
+
+function checkTime_15(){
+    $('#15-hour').removeClass();
+    if(time_15.isBefore(currentTime)===true){
+        $('#15-hour').attr('class','past')
+    } else if(time_15.isSame(currentTime)===true){
+        $('#15-hour').attr('class','present')
+    } else if (time_15.isAfter(currentTime)===true){
+        $('#15-hour').attr('class', 'future')
+    };
+};
+
+function checkTime_16(){
+    $('#16-hour').removeClass();
+    if(time_16.isBefore(currentTime)===true){
+        $('#16-hour').attr('class','past')
+    } else if(time_16.isSame(currentTime)===true){
+        $('#16-hour').attr('class','present')
+    } else if (time_16.isAfter(currentTime)===true){
+        $('#16-hour').attr('class', 'future')
+    };
+};
+
+function checkTime_17(){
+    $('#17-hour').removeClass();
+    if(time_17.isBefore(currentTime)===true){
+        $('#17-hour').attr('class','past')
+    } else if(time_17.isSame(currentTime)===true){
+        $('#17-hour').attr('class','present')
+    } else if (time_17.isAfter(currentTime)===true){
+        $('#17-hour').attr('class', 'future')
+    };
+};
+
+
 checkTime_9();
+checkTime_10();
+checkTime_11();
+checkTime_12();
+checkTime_13();
+checkTime_14();
+checkTime_15();
+checkTime_16();
+checkTime_17();
 
 
 
