@@ -25,7 +25,7 @@ var hour16=$('<div> 16:00 </div>');
 var hour17=$('<div> 17:00</div>');
 
 //adds save button to forms to capture textarea inputs.
-var button9=$('<button>save</button>').addClass("saveBtn");
+var button9=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-9", type: "submit"});
 var button10=$('<button>save</button>').addClass("saveBtn");
 var button11=$('<button>save</button>').addClass("saveBtn");
 var button12=$('<button>save</button>').addClass("saveBtn");
@@ -34,6 +34,14 @@ var button14=$('<button>save</button>').addClass("saveBtn");
 var button15=$('<button>save</button>').addClass("saveBtn");
 var button16=$('<button>save</button>').addClass("saveBtn");
 var button17=$('<button>save</button>').addClass("saveBtn");
+
+// on load, check localStorage and post to textarea.
+
+//on click, save to localStorage.
+$("button-9").click(function(event){
+    event.preventDefault();
+    console.log('stuff');
+})
 
 //appends divs, textareas, and buttons to respective forms.
 hour9.appendTo('.time-box-9');
