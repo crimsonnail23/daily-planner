@@ -38,14 +38,14 @@ var textArea17=$('<textarea/>').attr('id', '17-hour');
 
 //adds save button to forms to capture textarea inputs.
 var button9=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-9", type: "submit"});
-var button10=$('<button>save</button>').addClass("saveBtn");
-var button11=$('<button>save</button>').addClass("saveBtn");
-var button12=$('<button>save</button>').addClass("saveBtn");
-var button13=$('<button>save</button>').addClass("saveBtn");
-var button14=$('<button>save</button>').addClass("saveBtn");
-var button15=$('<button>save</button>').addClass("saveBtn");
-var button16=$('<button>save</button>').addClass("saveBtn");
-var button17=$('<button>save</button>').addClass("saveBtn");
+var button10=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-10", type: "submit"});
+var button11=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-11", type: "submit"});
+var button12=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-12", type: "submit"});
+var button13=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-13", type: "submit"});
+var button14=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-14", type: "submit"});
+var button15=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-15", type: "submit"});
+var button16=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-16", type: "submit"});
+var button17=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-17", type: "submit"});
 
 //appends forms to the container, and then appends hour div, textareas, and buttons to the form.
 form9.appendTo('.container');
@@ -97,12 +97,116 @@ button17.appendTo('#time-box-17');
 $().ready(function(){
    getTask=localStorage.getItem("9th_hour");
    $('#9-hour').val(getTask)
+
+   getTask=localStorage.getItem("10th_hour");
+   $('#10-hour').val(getTask)
+
+   getTask=localStorage.getItem("11th_hour");
+   $('#11-hour').val(getTask)
+
+   getTask=localStorage.getItem("12th_hour");
+   $('#12-hour').val(getTask)
+
+   getTask=localStorage.getItem("13th_hour");
+   $('#13-hour').val(getTask)
+
+   getTask=localStorage.getItem("14th_hour");
+   $('#14-hour').val(getTask)
+
+   getTask=localStorage.getItem("15th_hour");
+   $('#15-hour').val(getTask)
+
+   getTask=localStorage.getItem("16th_hour");
+   $('#16-hour').val(getTask)
+
+   getTask=localStorage.getItem("17th_hour");
+   $('#17-hour').val(getTask)
 })
 
 //on click, save to localStorage. each textarea will be saved to it own's localstorage.
 $("#button-9").click(function(event){
-   
-    event.preventDefault();
+   event.preventDefault();
     dailyTask = $('#9-hour').val();
     localStorage.setItem("9th_hour", dailyTask);
-})
+});
+
+$("#button-10").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#10-hour').val();
+     localStorage.setItem("10th_hour", dailyTask);
+ });
+
+ $("#button-11").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#11-hour').val();
+     localStorage.setItem("11th_hour", dailyTask);
+ });
+
+ $("#button-12").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#12-hour').val();
+     localStorage.setItem("12th_hour", dailyTask);
+ });
+
+ $("#button-13").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#13-hour').val();
+     localStorage.setItem("13th_hour", dailyTask);
+ });
+
+ $("#button-14").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#14-hour').val();
+     localStorage.setItem("14th_hour", dailyTask);
+ });
+
+ $("#button-15").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#15-hour').val();
+     localStorage.setItem("15th_hour", dailyTask);
+ });
+
+ $("#button-16").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#16-hour').val();
+     localStorage.setItem("16th_hour", dailyTask);
+ });
+
+ $("#button-17").click(function(event){
+    event.preventDefault();
+     dailyTask = $('#17-hour').val();
+     localStorage.setItem("17th_hour", dailyTask);
+ });
+
+//check if 9th hour is in the past, present, or future
+//following are variables for each hour that will then be compared to the current time. 
+//and if true,then it will change the class of text area.
+var currentTime = moment();
+var time_9 = moment({h:14});
+var time_10= moment({h:10});
+var time_11=moment({h:11});
+var time_12=moment({h:12});
+var time_13=moment({h:13});
+var time_14=moment({h:14});
+var time_15=moment({h:15});
+var time_16=moment({h:16});
+var time_17=moment({h:17});
+
+//check if '9:00' is in the past, and if it is, then update textarea class with appropriate color.
+//and if not, then check if '9:00' is present and update textarea class.
+//and if not, then if '9:00' is in the future, and update textarea class.
+function checkTime_9(){
+    $('#9-hour').removeClass();
+    if(time_9.isBefore(currentTime)===true){
+        $('#9-hour').attr('class','past')
+    } else if(time_9.isSame(currentTime)===true){
+        $('#9-hour').attr('class','present')
+    } else if (time_9.isAfter(currentTime)===true){
+        $('#9-hour').attr('class', 'future')
+    };
+};
+checkTime_9();
+
+
+
+
