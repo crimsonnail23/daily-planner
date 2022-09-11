@@ -93,14 +93,16 @@ hour17.appendTo('#time-box-17');
 textArea17.appendTo('#time-box-17');
 button17.appendTo('#time-box-17');
 
-// on load, check localStorage and post to textarea.
+// on page load, check localStorage and post to textarea.
+$().ready(function(){
+   getTask=localStorage.getItem("9th_hour");
+   $('#9-hour').val(getTask)
+})
 
 //on click, save to localStorage. each textarea will be saved to it own's localstorage.
 $("#button-9").click(function(event){
-    console.log('ln100');
+   
     event.preventDefault();
     dailyTask = $('#9-hour').val();
-    console.log(dailyTask);
-    localStorage.setItem("dailyTask", dailyTask);
-    console.log('ln104');
+    localStorage.setItem("9th_hour", dailyTask);
 })
