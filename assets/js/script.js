@@ -1,3 +1,4 @@
+//following codeblock will add current date to index.html
 var currentDate = moment().format('MM/DD/YYYY');
 $("#currentDay").text(currentDate);
 
@@ -46,39 +47,47 @@ var button15=$('<button>save</button>').addClass("saveBtn");
 var button16=$('<button>save</button>').addClass("saveBtn");
 var button17=$('<button>save</button>').addClass("saveBtn");
 
-//appends divs, textareas, and buttons to respective forms.
+//appends forms to the container, and then appends hour div, textareas, and buttons to the form.
 form9.appendTo('.container');
 hour9.appendTo('#time-box-9');
 textArea9.appendTo('#time-box-9');
 button9.appendTo('#time-box-9');
+
 form10.appendTo('.container');
 hour10.appendTo('#time-box-10');
 textArea10.appendTo('#time-box-10');
 button10.appendTo('#time-box-10');
+
 form11.appendTo('.container');
 hour11.appendTo('#time-box-11');
 textArea11.appendTo('#time-box-11');
 button11.appendTo('#time-box-11');
+
 form12.appendTo('.container');
 hour12.appendTo('#time-box-12');
 textArea12.appendTo('#time-box-12');
 button12.appendTo('#time-box-12');
+
 form13.appendTo('.container');
 hour13.appendTo('#time-box-13');
 textArea13.appendTo('#time-box-13');
 button13.appendTo('#time-box-13');
+
 form14.appendTo('.container');
 hour14.appendTo('#time-box-14');
 textArea14.appendTo('#time-box-14');
 button14.appendTo('#time-box-14');
+
 form15.appendTo('.container');
 hour15.appendTo('#time-box-15');
 textArea15.appendTo('#time-box-15');
 button15.appendTo('#time-box-15');
+
 form16.appendTo('.container');
 hour16.appendTo('#time-box-16');
 textArea16.appendTo('#time-box-16');
 button16.appendTo('#time-box-16');
+
 form17.appendTo('.container');
 hour17.appendTo('#time-box-17');
 textArea17.appendTo('#time-box-17');
@@ -86,8 +95,12 @@ button17.appendTo('#time-box-17');
 
 // on load, check localStorage and post to textarea.
 
-//on click, save to localStorage.
-$("button-9").click(function(event){
+//on click, save to localStorage. each textarea will be saved to it own's localstorage.
+$("#button-9").click(function(event){
+    console.log('ln100');
     event.preventDefault();
-    console.log('stuff');
+    dailyTask = $('#9-hour').val();
+    console.log(dailyTask);
+    localStorage.setItem("dailyTask", dailyTask);
+    console.log('ln104');
 })
