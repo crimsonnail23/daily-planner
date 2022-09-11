@@ -1,17 +1,8 @@
 var currentDate = moment().format('MM/DD/YYYY');
 $("#currentDay").text(currentDate);
 
-//variables to add text areas for each div.
-var textArea9=$('<textarea/>').attr('id', '9-hour');
-var textArea10=$('<textarea/>').attr('id', '10-hour');
-var textArea11=$('<textarea/>').attr('id', '11-hour');
-var textArea12=$('<textarea/>').attr('id', '12-hour');
-var textArea13=$('<textarea/>').attr('id', '13-hour');
-var textArea14=$('<textarea/>').attr('id', '14-hour');
-var textArea15=$('<textarea/>').attr('id', '15-hour');
-var textArea16=$('<textarea/>').attr('id', '16-hour');
-var textArea17=$('<textarea/>').attr('id', '17-hour');
-
+//variables to create forms.
+var form9=$('<form></form>').attr('id', 'time-box-9')
 
 //variables to add divs to timeblock.
 var hour9=$('<div> 09:00</div>');
@@ -24,6 +15,17 @@ var hour15=$('<div> 15:00 </div>');
 var hour16=$('<div> 16:00 </div>');
 var hour17=$('<div> 17:00</div>');
 
+//variables to add text areas for each div.
+var textArea9=$('<textarea/>').attr('id', '9-hour');
+var textArea10=$('<textarea/>').attr('id', '10-hour');
+var textArea11=$('<textarea/>').attr('id', '11-hour');
+var textArea12=$('<textarea/>').attr('id', '12-hour');
+var textArea13=$('<textarea/>').attr('id', '13-hour');
+var textArea14=$('<textarea/>').attr('id', '14-hour');
+var textArea15=$('<textarea/>').attr('id', '15-hour');
+var textArea16=$('<textarea/>').attr('id', '16-hour');
+var textArea17=$('<textarea/>').attr('id', '17-hour');
+
 //adds save button to forms to capture textarea inputs.
 var button9=$('<button>save</button>').addClass("saveBtn").attr({ id:"button-9", type: "submit"});
 var button10=$('<button>save</button>').addClass("saveBtn");
@@ -35,18 +37,11 @@ var button15=$('<button>save</button>').addClass("saveBtn");
 var button16=$('<button>save</button>').addClass("saveBtn");
 var button17=$('<button>save</button>').addClass("saveBtn");
 
-// on load, check localStorage and post to textarea.
-
-//on click, save to localStorage.
-$("button-9").click(function(event){
-    event.preventDefault();
-    console.log('stuff');
-})
-
 //appends divs, textareas, and buttons to respective forms.
-hour9.appendTo('.time-box-9');
-textArea9.appendTo('.time-box-9');
-button9.appendTo('.time-box-9');
+form9.appendTo('.container');
+hour9.appendTo('#time-box-9');
+textArea9.appendTo('#time-box-9');
+button9.appendTo('#time-box-9');
 hour10.appendTo('.time-box-10');
 textArea10.appendTo('.time-box-10');
 button10.appendTo('.time-box-10');
@@ -71,3 +66,11 @@ button16.appendTo('.time-box-16');
 hour17.appendTo('.time-box-17');
 textArea17.appendTo('.time-box-17');
 button17.appendTo('.time-box-17');
+
+// on load, check localStorage and post to textarea.
+
+//on click, save to localStorage.
+$("button-9").click(function(event){
+    event.preventDefault();
+    console.log('stuff');
+})
