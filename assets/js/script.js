@@ -23,7 +23,7 @@ var hour13=$('<div> 1:00 </div>');
 var hour14=$('<div> 2:00</div>');
 var hour15=$('<div> 3:00 </div>');
 var hour16=$('<div> 4:00 </div>');
-var hour17=$('<div> 5:00</div>');
+var hour17=$('<div> 5git s:00</div>');
 
 //variables to add text areas for each div.
 var textArea9=$('<textarea/>').attr('id', '9-hour');
