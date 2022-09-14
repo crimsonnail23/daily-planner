@@ -19,11 +19,11 @@ var hour9=$('<div> 09:00</div>');
 var hour10=$('<div> 10:00</div>');
 var hour11=$('<div> 11:00</div>');
 var hour12=$('<div> 12:00</div>');
-var hour13=$('<div> 13:00 </div>');
-var hour14=$('<div> 14:00</div>');
-var hour15=$('<div> 15:00 </div>');
-var hour16=$('<div> 16:00 </div>');
-var hour17=$('<div> 17:00</div>');
+var hour13=$('<div> 1:00 </div>');
+var hour14=$('<div> 2:00</div>');
+var hour15=$('<div> 3:00 </div>');
+var hour16=$('<div> 4:00 </div>');
+var hour17=$('<div> 5:00</div>');
 
 //variables to add text areas for each div.
 var textArea9=$('<textarea/>').attr('id', '9-hour');
@@ -181,7 +181,9 @@ $("#button-10").click(function(event){
 //check if 9th hour is in the past, present, or future
 //following are variables for each hour that will then be compared to the current time. 
 //and if true,then it will change the class of text area.
-var currentTime = moment();
+var currentHour = moment().hour();
+var currentTime = moment({h:currentHour})
+console.log(currentTime);
 var time_9 = moment({h:9});
 var time_10= moment({h:10});
 var time_11=moment({h:11});
@@ -196,10 +198,12 @@ var time_17=moment({h:17});
 //and if not, then check if '9:00' is present and update textarea class.
 //and if not, then if '9:00' is in the future, and update textarea class.
 function checkTime_9(){
+    console.log(time_9);
     $('#9-hour').removeClass();
     if(time_9.isBefore(currentTime)===true){
         $('#9-hour').attr('class','past')
     } else if(time_9.isSame(currentTime)===true){
+  
         $('#9-hour').attr('class','present')
     } else if (time_9.isAfter(currentTime)===true){
         $('#9-hour').attr('class', 'future')
